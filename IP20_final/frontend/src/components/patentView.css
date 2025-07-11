@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+.patentViewContainer
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    overflow: hidden;
+
+}
+.patentView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+    position: relative;
+}
+
+.starsBackground {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.starsContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.8; }
+}
+
+.nebula {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.nebulaOrange {
+    background: radial-gradient(circle at center, #be7a3a, transparent 50%);
+    width: 60vw;
+    height: 60vw;
+    top: 10vh;
+    right: -10vw;
+}
+
+.nebulaRedish {
+    background: radial-gradient(circle at center, #a55e24, transparent 50%);
+    width: 50vw;
+    height: 50vw;
+    bottom: 50vh;
+    left: -10vw;
+}
+
+.patentViewBigTextContainer {
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.resultsFor {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #9ca3af;
+}
+
+.patentViewBigText {
+    font-size: 8rem;
+    margin: 0;
+    background: linear-gradient(to right, #e44023, #f5a180);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.carousels-container {
+    width: 85vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: -6vh;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-section {
+    flex: 1;
+    min-width: 25vw;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-play-state: paused;
+}
+  
+.carousel-section:nth-child(2) {
+    animation-delay: 1s; 
+    animation-play-state: running;
+}
+  
+.carousel-section:nth-child(1) {
+    animation-delay: 1.5s; 
+    animation-play-state: running;
+}
+  
+.carousel-section:nth-child(3) {
+    animation-delay: 2s; 
+    animation-play-state: running;
+}
+  
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.patentCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border-radius: 8px;
+    background-color: rgba(29, 22, 21, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid #3d322c;
+    position: relative;
+    box-shadow: 0 0px 60px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.patentCard:hover {
+    border-color: #f19c63;
+    transform: translateY(-0.25rem);
+}
+
+.patentId {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #acacac;
+    margin: 0;
+}
+
+.patentImage {
+    margin-top: 1.5rem;
+    width: 94%;
+    height: 65%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.patentTextContainer {
+    margin: 0;
+    width: 94%;
+}
+
+.patentCategory,
+.patentId {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #acacac;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.patentTextContainerTop {
+    margin-top: .4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 90%
+}
+
+.patentTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: .5rem;
+    color: white;
+}
+
+.patentButton {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(229, 134, 70, 0.2);
+    border: 1px solid rgba(229, 147, 70, 0.3);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 1rem;
+    width: 91%;
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.patentButton:hover {
+    background-color: rgba(229, 142, 70, 0.3);
+    transform: translateY(-2px);
+}
+
+.patentButton:active {
+    background-color: rgba(229, 142, 70, 0.4);
+    transform: translateY(0);
+    transition: all 0.1s ease-in-out;
+}
+
+.circleMoonPatent {
+    position: absolute;
+    width: 140vw;
+    opacity: 20%;
+    bottom: 30vh;
+    left: auto;
+    right: auto;
+    border-radius: 50%;
+    z-index: 0;
+    animation: spin 150s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    overflow: visible;
+}
+
+.modalBox {
+    padding-bottom: 1.5rem;
+    overflow: auto;
+    color: white;
+    width: 50vw;
+    background-color: rgba(34, 22, 20, 0.4);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 20px;
+    border: 1px solid #513f37;
+    box-shadow: 0 0 30px rgba(250, 145, 96, 0.2);
+}
+
+.modalImage {
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.modalImageContainer {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modalContent {
+    width: 90%;
+    margin-top: 1.5rem;
+}
+
+.patentTitleModal {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin-top: .5rem;
+}
+
+.smallModalTextContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid rgba(229, 115, 70, 0.3);
+    border-bottom: 1px solid rgba(229, 115, 70, 0.3);
+    padding: 0.5rem 0;
+}
+
+.smallModalText {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: .5rem;
+    font-weight: 400;
+}
+
+.modalDescriptionContainer {
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+.modalHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem; 
+    margin-bottom: 1.3rem;
+}
+
+.patentTitleModal {
+    flex: 1; 
+    margin: 0; 
+    overflow: hidden;
+}
+
+.savePatentButton {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(250, 158, 96, 0.2), rgba(229, 89, 70, 0.2));
+    border: 2px solid rgba(250, 152, 96, 0.3);
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #ffffff;
+    padding: .7rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.savePatentButton:hover {
+    background: linear-gradient(to right, rgba(250, 119, 96, 0.3), rgba(229, 89, 70, 0.3));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(250, 132, 96, 0.3);
+}
+
+.savePatentButton:active {
+    background: linear-gradient(to right, rgba(250, 140, 96, 0.4), rgba(229, 70, 70, 0.4));
+    transform: translateY(0);
+    transition: all 0.1s ease-in-out;
+}
+.stashedNotification {
+    all: unset;
+    position: fixed;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(to right, rgba(250, 119, 96, 0.3), rgba(229, 89, 70, 0.3));
+    border: 2px solid rgba(250, 152, 96, 0.3);
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(229, 89, 70, 0.2);
+    z-index: 9999;
+    animation: fadeSlide 3s ease forwards;
+  }
+  
+  @keyframes fadeSlide {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(20px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-20px);
+    }
+  }
+  
+  

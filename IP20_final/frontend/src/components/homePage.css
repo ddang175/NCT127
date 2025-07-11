@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+.homePageContainer {
+  font-family: 'Space Grotesk', sans-serif;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+.nebula {
+  all: unset;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 100%;
+  z-index: -100;
+  overflow: hidden;
+
+}
+
+.nebulaRed {
+  background: radial-gradient(circle at center, #e54646, transparent 10%);
+  width: 20vw;
+  height: 20vw;
+  top: -10vw;
+  right: -20vw;
+}
+
+.nebulaOrange {
+  background: radial-gradient(circle at center, #fa9860, transparent 10%);
+  width: 50vw;
+  height: 50vw;
+  bottom: -10vw;
+  left: -10vw;
+  overflow: hidden;
+
+}
+
+.homePage {
+  background-color: black;
+  background-image: url('../assets/space.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  color: white;
+}
+
+.landingPageBigText {
+  font-size: 3vw;
+  text-align: right;
+  font-family: "Space Grotesk";
+  background: linear-gradient(to right, #fa6060, #e5a546);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+
+}
+
+.landingPageBigTextContainer {
+  margin-top: 4.5%;
+  margin-right: 4.5%;
+}
+
+.landingPageSmallTextContainer {
+  margin-top: 51vh;
+  text-align: center;
+  font-family: "Space Grotesk";
+}
+
+.landingPageSmallText {
+  font-size: 1.5vw;
+  color: white;
+  font-family: "Space Grotesk";
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vh;
+  margin-right: 5vh;
+  gap: 5vw;
+}
+
+.loginButton {
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(250, 158, 96, 0.2), rgba(229, 89, 70, 0.2));
+  border: 2px solid rgba(250, 152, 96, 0.3);
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  width: 20vw;
+  height: 5vh;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginButton:hover {
+  background: linear-gradient(to right, rgba(250, 119, 96, 0.3), rgba(229, 89, 70, 0.3));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(250, 132, 96, 0.3);
+}
+
+.loginButton:active {
+  background: linear-gradient(to right, rgba(250, 140, 96, 0.4), rgba(229, 70, 70, 0.4));
+  transform: translateY(0);
+  transition: all 0.1s ease-in-out;
+}
+
+.signUpButton {
+  z-index: 1;
+  ;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  background: linear-gradient(to right, rgba(250, 158, 96, 0.2), rgba(229, 89, 70, 0.2));
+  border: 2px solid rgba(250, 152, 96, 0.3);
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  width: 20vw;
+  height: 5vh;
+  transition: all 0.2s ease-in-out;
+}
+
+.signUpButton:hover {
+  background: linear-gradient(to right, rgba(250, 119, 96, 0.3), rgba(229, 89, 70, 0.3));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(250, 132, 96, 0.3);
+}
+
+.signUpButton:active {
+  background: linear-gradient(to right, rgba(250, 140, 96, 0.4), rgba(229, 70, 70, 0.4));
+  transform: translateY(0);
+  transition: all 0.1s ease-in-out;
+}

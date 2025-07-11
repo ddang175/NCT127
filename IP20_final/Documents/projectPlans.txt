@@ -1,0 +1,224 @@
+GOALS AND OBJECTIVES
+● Develop a Full-Stack Web Application
+○ Use React for the front end and Node.js with Express for the
+back end.
+○ Ensure smooth and intuitive user interactions with a responsive
+design.
+● Display NASA's Patents Using the Tech Transfer API
+○ Fetch and display patent information from NASA's Tech
+Transfer API dynamically.
+○ Present data in an organized, visually appealing format.
+○ Include images of technologies when available.
+● Implement an Intuitive Search Feature
+○ Allow users to search for patents efficiently.
+○ Optimize search functionality to make finding information easier.
+● User Accounts and Authentication
+○ Implement sign-in and user accounts for personalized
+experiences.
+○ Use authentication methods to ensure secure login and data
+access.
+● Saving Patents and Adding Notes
+○ Allow users to save patents to their account.
+○ Enable users to write and store notes about saved patents.
+○ Provide a dedicated page where users can view their saved
+patents and notes.
+● Database for User Data and Saved Patents
+○ Store user accounts saved patents, and notes in either MySQL
+or MongoDB (final choice pending).
+● Create Core Website Pages
+○ Home/Landing Page introducing the site and highlighting
+NASA’s technologies.
+○ Search Page where users can browse and filter patents.
+○ Technology Pages for commonly referenced NASA
+innovations.
+○ Saved Patents Page where users can access their saved
+patents and notes.
+● Ensure Smooth Performance and Fast Load Times
+○ Optimize API calls and data handling for speed.
+○ Implement efficient rendering methods for a smooth browsing
+experience.
+● Enhance UI/UX Design
+○ Create a visually appealing, easy-to-navigate interface.
+○ Improve user experience through thoughtful layout and
+interaction design.
+● Learn and Improve Technical Skills
+○ Gain experience in React, Node.js, and database
+management.
+○ Deepen understanding of UI/UX principles and good website
+design.
+○ Experiment with CSS animations to enhance the user
+experience.
+PROJECT DESCRIPTION
+NCT127 is a dynamic web application designed to provide the
+public—astronomy enthusiasts, students, curious individuals, and the
+general public—with easy access to NASA's technological advancements
+through patents. As one of the largest government entities, NASA’s
+innovations in technology directly impact our lives, and NCT127 seeks to
+make these developments more accessible and easier to understand. The
+website aims to create an educational platform where users can explore
+NASA’s vast collection of patents, organized by categories, and gain
+insights into the cutting-edge technology shaping our world.
+Technology Stack
+● Frontend: React
+● Backend: Node.js with Express
+● Database: MongoDB or MySQL (Final decision based on efficiency)
+● API Integration: NASA’s Tech Transfer API to pull patent data
+Key Features and User Interactions
+1. Home Page
+○ The homepage will serve as the entry point for the site. It will
+provide links to various patent categories (e.g., Rockets,
+Thrusters, Ships, Satellites, etc.).
+○ It will feature an overview of NASA's technological
+advancements, highlighting some popular and newly added
+patents.
+○ The homepage will be visually appealing, with space-themed
+design elements that maintain a professional look.
+2. Navigation Bar
+○ The navigation bar will be persistent across all pages, providing
+easy access to different website sections.
+○ It will include links to the homepage, popular categories, search
+functionality, and the user’s account page.
+○ The navbar will be responsive and adapt to different screen
+sizes for mobile and desktop users.
+3. Search Feature
+○ A powerful and intuitive search feature will allow users to
+quickly find specific patents by entering keywords, patent
+names, or technologies.
+○ The search results will display relevant patents with brief
+descriptions, and users can click on each result for more
+details.
+4. Patent Category Pages
+○ Each category page (e.g., Rockets, Satellites, etc.) will feature
+a list of relevant patents.
+○ Each patent entry will display key information such as:
+■ Patent name
+■ Image (if available)
+■ Technology name
+■ Description
+■ Other relevant metadata include publication date,
+inventor(s), and links to detailed resources.
+○ Users can browse through patents within a specific category
+and view more details about each one.
+5. User Account Page
+○ Users can create an account, sign in, and manage their saved
+patents.
+○ The account page will display a list of patents the user has
+saved, along with any personal notes they have added to each
+patent.
+○ Users can easily add, edit, or delete their saved patents and
+notes, providing a personalized experience.
+6. Patent Detail Pages
+○ Each patent will have its dedicated detail page, offering in-depth
+information.
+○ The page will include:
+■ Patent name
+■ Full description
+■ Technology name
+■ Images (if available)
+■ Related patents
+■ Links to more resources for further exploration.
+○ Users can add this patent to their account and write personal
+notes about it for future reference.
+How the App Will Work Together
+● Frontend (React):
+The front end will be built using React to provide an interactive,
+dynamic user experience. React will enable smooth navigation
+between pages, from category pages to patent details, and ensure
+that the app responds efficiently to user inputs, like searches and
+interactions with saved patents.
+● Backend (Node.js with Express):
+Node.js with Express will serve as the backend, handling requests
+from the front end. The backend will manage user authentication,
+save user data (such as saved patents and notes), and communicate
+with the database to store and retrieve information. It will also fetch
+data from NASA’s Tech Transfer API to populate the patent
+information displayed on the site.
+● Database (MongoDB or MySQL):
+A database will store user accounts, saved patents, and notes. We
+will use MongoDB if we need flexible data models or MySQL for
+structured, relational data storage. The database will allow users to
+store and retrieve personalized data, such as the patents they save
+and their notes on each patent.
+● Integration with NASA’s Tech Transfer API:
+The backend will also handle fetching patent data from NASA’s Tech
+Transfer API, displaying information such as patent names,
+descriptions, and images (if available). This data will be integrated
+into the front end to create an engaging and educational user
+experience.
+
+FEATURE OWNERSHIP AND
+RESPONSIBILITY
+● Login and Signup
+○ Allow users to sign in and create an account. Accounts are
+essential to store user-specific data (patents)
+○ React, Node.js, and either MongoDB/MySQL
+○ Handled by Danton (Front end + Back end)
+● Landing Page
+○ Visually aesthetic page where the user ends up after singing in
+○ React
+○ Handled by Hung (Front end)
+● Navigation Bar
+○ Allow for easy navigation between pages and access to the
+search bar.
+○ React, Node.js
+○ Handled by Hung (Front end + Back end)
+● Search Bar
+○ Allow for users to search up what ever they want and find
+patents related to that.
+○ React, Node.js
+○ Handled by Hung (Front end + Back end)
+● Patent View/List
+○ Show a list of all relevant patents to page or search
+○ React, Node.js
+○ Handled by Danton(Front end + Back end)
+● Account Page
+○ Show saved patents with notes.
+○ React, Node.js, and either MongoDB/MySQL
+○ Handled by Danton (Front end + Back end)
+● Note Writing Page
+○ Allow users to write notes to certain saved patent
+○ React, Node.js, and either MongoDB/MySQL
+○ Handled by Danton (Front end + Back end)
+Resources and Tools
+● React
+● GitLab
+● Figma
+● MongoDB / MySQL (Not sure which one yet)
+● MUI / Bootstrap
+● Node.js
+● NASA Tech Transfer API
+File Structure and Project Organization
+● frontend/
+○ assets/ - Images and external data
+○ components/ - React components
+○ App.jsx LogIn.jsx SignUp.jsx PatentList.jsx Account.jsx
+AddNote.jsx
+● backend/ - Express server, API routes in functions for easy calls and
+database logic
+● Documents/ - Planning sketches, Figmam Software Architecture
+Document, final report, and video.
+Data Sources and Management
+● Data collection
+○ Users will input data, such as email and username
+○ Past patents a user clicked on
+○ Saved patents from a user
+○ Different categories a user has created
+○ Saved notes on each patent that a user adds
+● Data storage
+○ Will use either MongoDB or MySQL (Not finalized)
+● Data organization
+○ Split user data into different fields
+■ Username field, Email field, Patents click on field, Saved
+patents field, etc.
+User Experience Views
+● UX
+○ First, the user will land on the home pag,e which includes
+■ Navbar so the user can locate anything that the page
+contains
+● Every page has the navbar
+■ Welcome message
+○ When a user clicks on a preset search, it will take them to a
+new page that displays the patents.
+■ Patents are clickable to expand more info.
+○ There will be an accounts sidebar for the user to access their
+account-specific information and features.

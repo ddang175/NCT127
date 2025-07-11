@@ -1,0 +1,12 @@
+.satelliteImage {
+    z-index: 0;
+    position: absolute;
+    top: 10%;
+    overflow: hidden;
+    left: 14%;
+    height: 80vh;
+    pointer-events: none;
+    transform-origin: center;
+    animation: float 10s ease-in-out infinite alternate;
+  }
+  

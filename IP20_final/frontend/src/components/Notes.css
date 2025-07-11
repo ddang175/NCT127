@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.circleMoonNotes {
+    position: absolute;
+    top: -120vh;
+    left: -40vw;
+    width: 100vw;
+    opacity: 20%;
+    border-radius: 50%;
+    z-index: 0;
+    animation: spin 150s linear infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.notesContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 5vh;
+
+}
+
+
+
+.starsBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.starsContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+}
+
+.nebula {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.nebulaRed {
+  background: radial-gradient(circle at center, #e54646, transparent 70%);
+  width: 60vw;
+  height: 60vw;
+  top: -20vw;
+  right: -20vw;
+}
+
+.nebulaOrange {
+  background: radial-gradient(circle at center, #fa9860, transparent 70%);
+  width: 50vw;
+  height: 50vw;
+  bottom: -10vw;
+  left: -10vw;
+}
+
+.notesContent {
+  position: relative;
+  z-index: 10;
+  width: 50%;
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;    
+  overflow-x: hidden;          
+  padding-right: 0.5rem;       
+  scroll-behavior: smooth;
+}
+
+
+.notesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notesTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #fa7760, #e55146);
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, #fa9860, #e54646);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.saveButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(229, 94, 70, 0.3);
+}
+
+.patentImageContainer {
+  width: 100%;
+  background-color: rgba(31, 41, 55, 0.4);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #374151;
+}
+
+.patentImagePlaceholder {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #9ca3af;
+  font-weight: 500;
+}
+.patentImageEditnotes{
+  width: 100%;
+  height: auto;
+}
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.sectionIcon {
+  color: #fa9860;
+}
+.notesSection {
+  padding: 1rem;
+  background-color: rgba(31, 41, 55, 0.4);
+  border-radius: 0.75rem;
+  border: 1px solid #374151;
+}
+
+.notesTextarea {
+  
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 200px;
+  background-color: rgba(31, 41, 55, 0.4);
+  border: 1px solid #374151;
+  border: none;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0.5rem 1rem;
+  resize: vertical;
+  outline: none;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.notesTextarea:focus {
+  border-color: #e57346;
+}
+
+.urlsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.urlItem {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.urlInput {
+  flex: 1;
+  background-color: rgba(31, 41, 55, 0.4);
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.urlInput:focus {
+    border-color: #e57346;
+}
+
+.removeButton {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: 0.5rem;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.removeButton:hover {
+  background-color: rgba(220, 38, 38, 0.3);
+}
+
+.addButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(229, 155, 70, 0.2);
+  color: #f8bb81;
+  border: 1px solid rgba(229, 173, 70, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.addButton:hover {
+  background-color: rgba(229, 147, 70, 0.3);
+}
+
+.tagsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tagsInput {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tagInput {
+  flex: 1;
+  background-color: rgba(31, 41, 55, 0.4);
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.tagInput:focus {
+    border-color: #e57346;
+}
+
+.addTagButton {
+  background-color: rgba(229, 160, 70, 0.2);
+  color: #f8c581;
+  border: 1px solid rgba(229, 173, 70, 0.3);
+  border-radius: 0.5rem;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addTagButton:hover {
+  background-color: rgba(229, 187, 70, 0.3);
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tagItem {
+  background: linear-gradient(135deg, rgba(250, 165, 96, 0.2) 0%, rgba(224, 70, 229, 0.2) 100%);
+  border: 1px solid rgba(229, 134, 70, 0.3);
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.tagItem:hover {
+  background: linear-gradient(135deg, rgba(250, 152, 96, 0.3) 0%, rgba(229, 70, 229, 0.3) 100%);
+}
+
+.removeTagButton {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.removeTagButton:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}

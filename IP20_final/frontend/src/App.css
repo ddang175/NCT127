@@ -1,0 +1,10 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Space Grotesk', sans-serif;
+overflow-x: hidden !important;
+}
+nav {
+  all: unset;
+}

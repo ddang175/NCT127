@@ -1,0 +1,25 @@
+.navSmallButton{
+    cursor: pointer;
+    background-color: rgb(8,8,8);
+    color: whitesmoke;
+    padding: 0.5rem;
+    margin: 0;
+    font-family: "Space Grotesk", "sans-serif";
+    border: none;
+    border-radius: .5rem;
+    margin-bottom: 0.5rem;
+}
+.navSmallButton:hover{
+    background-color: #333333;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+.subdiv {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
